@@ -10,6 +10,8 @@ function demo() {
     <>
     <div>demo</div>
     <Demo3 changeCount = {countList} />
+    <div>demo3333</div>
+    <Demo3 changeCount = {countList} />
     </>
   )
 }
