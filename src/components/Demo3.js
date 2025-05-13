@@ -1,31 +1,34 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { NameProvider } from '../App'
 import useCountStore from '../StoreData/store';
 
 function Demo3(props) {
-    const[count,SetCount] = useState(0);
+    // const[count,SetCount] = useState(0);
     const nameDetails = useContext(NameProvider)
-    const setCount = useCountStore((state) => state.increase)
-    setCount(count)
+    const { count } = useCountStore();
+    console.error(props);
+    
+    // const setCount = useCountStore((state) => state.increase)
+    // setCount(count)
 
-    function handelCount()
-    {
-        SetCount(count + 1);
-        props.changeCount(count);
-    }
+    // function handelCount()
+    // {
+    //     SetCount(count + 1);
+    //     props.changeCount(count);
+    // }
   return (
     <>
     <div>
-      demo3
+      page 3
     </div>
     <div>
       count :
       {count}
     </div>
       {nameDetails.shop_name}
-      <div>
+      {/* <div>
       <button onClick={handelCount}>btn</button>
-      </div>
+      </div> */}
     </>
   )
 }

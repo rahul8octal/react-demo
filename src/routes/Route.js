@@ -13,12 +13,12 @@ const routes = [
     component: <Demo1/>,
   }, 
   {
-    path: "/demo",
-    component: <Demo/>,
-  },
-  {
     path: "/api",
     component: <Api/>,
+  },
+  {
+    path: "/demo",
+    component: <Demo/>,
   },
   {
     path: "/dashboard",

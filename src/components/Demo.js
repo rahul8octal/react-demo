@@ -1,6 +1,7 @@
 import React from 'react'
-import Demo3 from './Demo3'
+// import Demo3 from './Demo3'
 import Demo1 from './Demo1';
+import Demo4 from './Demo4';
 
 function demo() {
 
@@ -9,11 +10,13 @@ function demo() {
   }
   return (
     <>
-    <div>demo</div>
-    <Demo3 changeCount = {countList} />
-    <div>demo3</div>
+    {/* <div>demo page</div>
+    <Demo3 changeCount = {countList} /> */}
+    <div>demo page</div>
     <Demo1 changeCount = {countList} />
+    <Demo4/>
     </>
+
   )
 }
 

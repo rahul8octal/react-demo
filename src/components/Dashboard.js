@@ -6,7 +6,8 @@ const BaseUrl = process.env.REACT_APP_API_HOST;
 
 function Dashboard() {
   const[data,SetData] = useState([]);
-  const count = useCountStore((state) => state.count)
+  // const count = useCountStore((state) => state.count)
+  const { count,setUserData } = useCountStore();
   // let token = localStorage.getItem('token');
   // console.log(token);
     useEffect(()=> {
@@ -22,6 +23,7 @@ function Dashboard() {
   //     });
         Http.callApi('get',BaseUrl + 'dashboard').then(response => {
             SetData(response.data.data);
+            setUserData(response.data.data);
         }).catch(error => {
             console.log(error);
         });
@@ -31,7 +33,7 @@ function Dashboard() {
       Dashboard<br/>
       {data.student}
       <br/>
-      count: {count}
+      count dashboard page: {count}
     </div>
   )
 }
