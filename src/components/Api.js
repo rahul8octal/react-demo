@@ -4,8 +4,8 @@ const BaseUrl = process.env.REACT_APP_API_HOST;
 
 function Api() {
     const credentials = {
-        email:"admin@gmail.com",
-        password:"admin@123"
+        email:"superadmin8@gmail.com",
+        password:"Octal@admin#"
 
     };
     useEffect(()=> {
@@ -19,7 +19,7 @@ function Api() {
     },[])
   return (
     <div>
-      api
+      API Login
     </div>
   )
 }

@@ -1,10 +1,6 @@
 import { createContext } from "react";
-import {
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Route from "./routes/index";
-// import Demo from './components/Demo'
-// import Demo1 from './components/Demo1'
 import Header from './components/Header';
 import Http from "./Http";
 const NameProvider = createContext();
@@ -19,8 +15,6 @@ function App() {
     Http.setBearerToken(`${localStorage.getItem('token')}`);
   }
   return (
-
-
         <BrowserRouter>
         <NameProvider.Provider value={shopDetails}>
         <Header/>
